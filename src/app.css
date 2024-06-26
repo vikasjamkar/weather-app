@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	/* background-image: url(background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; */
+	background: #4e54c8;
+	background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);
+	background: linear-gradient(to right, #8f94fb, #4e54c8);
+
+}
+#Weather_app{
+	height: 100%;
+	width: 100%;
+	padding: 100px 100px;
+
+}
+.Weather_container{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+.container_left{
+	width: 70%;
+	height: auto;
+	position: relative;
+
+}
+#title{
+	position: absolute;
+	z-index: 999;
+	top: 22%;
+	left: 10%;
+	color: white;
+	font-size: 20px;
+	font-family: fira code;
+	color:rgb(42, 206, 228);
+	text-transform: uppercase;
+	border-bottom: 2px solid whitesmoke;
+}
+#degree{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	color: white;
+}
+#degree h1{
+	font-size: 85px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#degree h2{
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#img{
+	display: none;
+	width: 50px;
+	height: 50px;
+}
+#error{
+	padding-top: 5px;
+
+}
+#degree .Weather_condition{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 12px;
+}
+#temprature{
+	display: flex;
+	color:orange;
+	gap: 20px;
+	position: absolute;
+	top: 89%;
+	left: 10%;
+	font-family: fira code;
+}
+.container_left img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* border-radius: 15px 0px 0px 15px; */
+
+}
+.container_right{
+	width: 30%;
+	height: auto;
+	background: white;
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(15px);
+	padding: 30px;
+
+}
+.container_right input{
+	width: 100%;
+	border-bottom: 1px solid white;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background: transparent;
+	height: 45px;
+	outline: none;
+	color: white;
+}
+.container_right input::placeholder{
+	color: white;
+	font-size: 16px;
+}
+.container_right button{
+	border:none;
+	background: transparent;
+	background-color: black;
+	color: white;
+	margin-left: 5px;
+	height: 45px;
+	border-radius: 50%;
+	width: 50px;
+	cursor: pointer;
+
+}
+.container_right .search{
+	display: flex;
+	justify-content: space-between;
+}
+.container_right .suggetion ul{
+	list-style: none;
+	color: white;
+}
+.container_right .suggetion ul li{
+	padding: 10px 0px;
+	cursor: pointer;
+}
+.container_right .suggetion ul li i{
+	margin-right: 10px;
+}
+.container_right .suggetion{
+	padding: 30px 0px;
+	border-bottom: 1px solid white;
+}
+.container_right .details{
+	padding-top: 10px;
+	color: white;
+	border-bottom: 1px solid white;
+}
+.container_right .details p{
+	padding-bottom: 10px;
+
+}
+.container_right .details ul{
+	list-style: none;
+	line-height: 3;
+}
+.container_right .details .d{
+	display: flex;
+	justify-content: space-between;
+}
+.container_right .details ul li i{
+	margin-right: 10px;
+}
+.copyright{
+	color: white;
+	padding-top: 20px;
+	font-size: 13px;
+	text-align: center;
+}
+
+@media (max-width:767px){
+	#Weather_app {
+		height: 100%;
+		width: 100%;
+		padding: 20px 20px;
+	}
+	.Weather_container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+	.container_left {
+		width: 100%;
+		height: 300px;
+		position: relative;
+	}
+	.container_right {
+		width: 100%;
+		height: auto;
+		background: white;
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(15px);
+		padding: 30px;
+	}
+	#title {
+		position: absolute;
+		z-index: 999;
+		top: 5%;
+		left: 10%;
+		color: white;
+		font-size: 20px;
+		font-family: fira code;
+		/* color: rgb(42, 206, 228); */
+		text-transform: uppercase;
+		border-bottom: 2px solid whitesmoke;
+	}
+	#degree {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		position: absolute;
+		top: 70%;
+		left: 5%;
+		color: white;
+	}
+	#degree h1{
+		font-size: 45px;
+	}
+}
+
+@media (min-width:768px) and (max-width:1023px){
+	#Weather_app {
+		height: 100%;
+		width: 100%;
+		padding: 20px 20px;
+	}
+	.Weather_container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+	.container_left {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.container_right {
+		width: 100%;
+		height: auto;
+		background: white;
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(15px);
+		padding: 30px;
+	}
+	#title {
+		position: absolute;
+		z-index: 999;
+		top: 5%;
+		left: 5%;
+		color: white;
+		font-size: 20px;
+		font-family: fira code;
+		/* color: rgb(42, 206, 228); */
+		text-transform: uppercase;
+		border-bottom: 2px solid whitesmoke;
+	}
+	#degree {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		position: absolute;
+		top: 70%;
+		left: 5%;
+		color: white;
+	}
+	#degree h1{
+		font-size: 85px;
+	}
+}
+
+@media (min-width:1024px) and (max-width:1279px){
+	#Weather_app {
+		height: 100%;
+		width: 100%;
+		padding: 20px 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50% ,-50%);
+	}
+	.Weather_container {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+	.container_left {
+		width: 70%;
+		height: auto;
+		position: relative;
+	}
+	.container_right {
+		width: 30%;
+		height: auto;
+		background: white;
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(15px);
+		padding: 30px;
+	}
+	#title {
+		position: absolute;
+		z-index: 999;
+		top: 5%;
+		left: 5%;
+		color: white;
+		font-size: 20px;
+		font-family: fira code;
+		/* color: rgb(42, 206, 228); */
+		text-transform: uppercase;
+		border-bottom: 2px solid whitesmoke;
+	}
+	#degree {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		position: absolute;
+		top: 80%;
+		left: 5%;
+		color: white;
+	}
+	#degree h1{
+		font-size: 95px;
+	}
+}
+@media (min-width:1280px){
+	#title {
+		position: absolute;
+		z-index: 999;
+		top: 20%;
+		left: 10%;
+		color: white;
+		font-size: 20px;
+		font-family: fira code;
+		/* color: rgb(42, 206, 228); */
+		text-transform: uppercase;
+		border-bottom: 2px solid whitesmoke;
+	}
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="./src/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="Weather_app">
+      <div class="Weather_container">
+        <h1 id="title">The Weather</h1>
+        <div class="container_left">
+          <img src="./public/images/haze.avif" alt="" id="banner" />
+          <div id="degree">
+            <h1 id="temp"></h1>
+
+            <h2 id="city"></h2>
+            <div class="Weather_condition">
+              <img src="" id="img" />
+              <p class="description"></p>
+            </div>
+          </div>
+          <div id="temprature">
+            <p class="min"></p>
+            <p class="max"></p>
+          </div>
+        </div>
+        <div class="container_right">
+          <div class="search">
+            <input type="text" placeholder="Search Location" id="txtSearch" />
+            <button
+              class="fa-solid fa-magnifying-glass"
+              id="btnSearch"
+            ></button>
+          </div>
+          <div id="error"></div>
+          <div class="suggetion">
+            <ul>
+              <li class="sugg-city" id="Pune">
+                <i class="fa-solid fa-location-dot"></i> Pune
+              </li>
+              <li class="sugg-city" id="kerala">
+                <i class="fa-solid fa-location-dot"></i> Kerala
+              </li>
+              <li class="sugg-city" id="Hyderabad">
+                <i class="fa-solid fa-location-dot"></i> Hyderabad
+              </li>
+              <li class="sugg-city" id="new york">
+                <i class="fa-solid fa-location-dot"></i> New york
+              </li>
+            </ul>
+          </div>
+          <div class="details">
+            <p>Weather Details</p>
+            <div class="d">
+              <ul>
+                <li><i class="fa-solid fa-cloud"></i> Cloudy</li>
+                <li><i class="fa-solid fa-droplet"></i> Humidity</li>
+                <li><i class="fa-solid fa-wind"></i> Wind</li>
+              </ul>
+              <ul>
+                <li id="cloud">%</li>
+                <li id="humidity">%</li>
+                <li id="wind">Km/h</li>
+              </ul>
+            </div>
+          </div>
+          <p class="copyright">&#169; Copyright & Designed by Vikas Jamkar</p>
+        </div>
+      </div>
+    </div>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
