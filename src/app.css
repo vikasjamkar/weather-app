@@ -227,12 +227,20 @@ body{
 		align-items: center;
 		gap: 10px;
 		position: absolute;
-		top: 70%;
+		top: 65%;
 		left: 5%;
 		color: white;
 	}
 	#degree h1{
 		font-size: 45px;
+	}
+	#temprature {
+		display: flex;
+		color: orange;
+		position: absolute;
+		top: 88%;
+		left: 5%;
+		gap: 20px;
 	}
 }
 
@@ -289,6 +297,15 @@ body{
 	#degree h1{
 		font-size: 85px;
 	}
+	#temprature {
+		display: flex;
+		color: orange;
+		position: absolute;
+		top: 92%;
+		left: 5%;
+		gap: 20px;
+	}
+
 }
 
 @media (min-width:1024px) and (max-width:1279px){
@@ -345,6 +362,14 @@ body{
 	}
 	#degree h1{
 		font-size: 95px;
+	}
+	#temprature {
+		display: flex;
+		color: orange;
+		position: absolute;
+		top: 92%;
+		left: 5%;
+		gap: 20px;
 	}
 }
 @media (min-width:1280px){

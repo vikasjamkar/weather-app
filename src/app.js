@@ -118,7 +118,7 @@ city.addEventListener("keyup", () => {
   document.getElementById("cloud").innerHTML = "";
   document.querySelector(".max").innerHTML = "";
   document.querySelector(".min").innerHTML = "";
-  poster.src = "haze.avif";
+  poster.src = "./public/images/haze.avif";
   document.querySelector(".description").innerHTML = "";
   cloudImg.style.display = "none";
 });
